@@ -3,12 +3,13 @@ import sys
 def compress_and_reverse(str1):
 	str1_len = len(str1)
 	i = 0
-	start = 0
+	start = -1
 	compressed_and_reversed = []
 	skip = False
 	while i < str1_len:
 		if str1[i] == ' ' and skip == False:
-			compressed_and_reversed.append(str1[start:i][::-1])
+			if start != -1:
+				compressed_and_reversed.append(str1[start:i][::-1])
 			skip = True
 		if skip == True and str1[i] != ' ':
 			start = i
@@ -21,8 +22,6 @@ def compress_and_reverse(str1):
 
 ##################################################
 #				Main							 #
-##################################################
-# 												 #
 ##################################################
 
 str1 = sys.argv[1]
