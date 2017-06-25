@@ -1,2 +1,2 @@
 # algo_python
-Alogrithm practice in Python, refer to <<±à³ÌÖ®·¨>>.
+Alogrithm practice in Python, refer to <<ç¼–ç¨‹ä¹‹æ³•>>.
