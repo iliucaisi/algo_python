@@ -11,7 +11,6 @@ def odd_even_sort(digits):
    j = len_digits - 1
    pivot_value = digits[0]
    while i < j:
-       print "DEBUG i=",i,"j=",j
        while j > i and not is_odd(digits[j]):
            j = j - 1
        digits[i] = digits[j]
@@ -21,6 +20,21 @@ def odd_even_sort(digits):
    
    digits[i] = pivot_value
    return digits
+
+def odd_even_sort_opt(digits):
+   len_digits = len(digits)
+   i = 0
+   j = len_digits - 1
+   while i < j:
+       if not is_odd(digits[j]):
+           j = j - 1
+       elif is_odd(digits[i]):
+           i = i + 1
+       else:
+           digits[i],digits[j] = digits[j],digits[i]
+   return digits
+
+
 
 ##################################################
 #	                main        	         	 #	
