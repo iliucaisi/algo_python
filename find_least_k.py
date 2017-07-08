@@ -4,6 +4,9 @@ def find(digits, k):
 	len_digits = len(digits)
 	if k <=0 and len_digits <=0:
 		return None
+        if len_digits <=k:
+            print "least k elment: ", digits[0: k] 
+            return 
 
 	i = 0
 	k_max = 0
@@ -26,7 +29,7 @@ def find(digits, k):
 
 
 ##################################################
-#					main						 #
+#			main			 #
 ##################################################
 
 if len(sys.argv) != 3:

@@ -38,7 +38,6 @@ def dynamic_search(numbers):
         i += 1
 #   why can not return maxend        
 #    return maxend
-    print minend
     return max_product
 
 
