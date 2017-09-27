@@ -3,7 +3,7 @@ import json
 import city
 
 while True:
-    city_name = input()
+    city_name = input("请输入所查城市名称?")
     city_code = city.city.get(city_name)
     if city_code is None: 
         exit(0)
